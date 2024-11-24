@@ -6,7 +6,7 @@ const path = require("path");
 const clients = new Set();
 
 // Serve client
-app.use(express.static(path.join(__dirname, "../client")));
+app.use(express.static(path.join(__dirname, "./client")));
 
 app.ws("/socket", function (client, req) {
   clients.add(client);

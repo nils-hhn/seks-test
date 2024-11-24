@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+#connection-status {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.connected {
+    color: green;
+}
+
+.not-connected {
+    color: red;
+}
+
+#canvas {
+    width: 100%;
+    height: 95vh;
+    position: relative;
+}
+
+.sticky-note {
+    position: absolute;
+    min-width: 100px;
+    min-height: 100px;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24),
+        2px 2px 10px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.19),
+        0 6px 6px rgba(0, 0, 0, 0.23);
+    resize: both;
+    overflow: hidden;
+    white-space: normal;    
+    word-wrap: break-word;     
+    overflow-wrap: break-word;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Apperar animation of sticky note */
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.sticky-note.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.sticky-note[contenteditable="true"] {
+    outline: none;
+}
+
+/* Used when updating the sticky note */
+.sticky-note-transition {
+    transition: all 0.3s ease;
+}
+
+.adding-note {
+    cursor: crosshair !important;
+}
+
+#add-note-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#add-note-btn:disabled {
+    opacity: 0.5; 
+    cursor: not-allowed; 
+    pointer-events: none;
+  }
+
+#user-list {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user {
+    background-color: gainsboro;
+    border-radius: 25px;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    /* Add ... if text is to long */
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <button id="add-note-btn" disabled>Add Sticky Note</button>
+        <p id="connection-status">Connecting...</p>
+    </div>
+    <div id="canvas"></div>
+    <div id="user-list"></div>
+    <script src="user.service.js"></script>
+    <script src="websocket.service.js"></script>
+    <script src="user.js"></script>
+    <script src="sticky-note.service.js"></script>
+    <script src="sticky-note.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

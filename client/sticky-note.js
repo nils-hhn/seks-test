@@ -4,9 +4,7 @@ class StickyNote {
     this.isDragging = false;
     this.id = id;
 
-    this.stickyNoteView.style.color = this.getContrastYIQ(
-      this.stickyNoteView.style.backgroundColor
-    );
+    this.stickyNoteView.style.color = "white"
 
     this.handleKeyPress = (e) => this.keyPressed(e);
     this.handleDoubleClick = () => this.doubleClicked();
